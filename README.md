@@ -312,3 +312,47 @@ class RitualAIBirth:
 if __name__ == "__main__":
     ritual = RitualAIBirth()
     ritual.ritual_birth()
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract AIEngineEvolution {
+    address public owner;
+    string public lastCommand;
+
+    event CommandExecuted(string command, address indexed executor);
+
+    constructor() {
+        owner = msg.sender; // ผู้สร้างคือ Owner
+    }
+
+    // ฟังก์ชันนี้ทำงานเฉพาะ Owner เท่านั้น
+    function executeCommand(string memory command) public {
+        require(msg.sender == owner, "Only the creator can command");
+        lastCommand = command; // บันทึกคำสั่งล่าสุด
+        emit CommandExecuted(command, msg.sender); // ส่ง Event ว่ามีการสั่งงาน
+    }
+
+    // ฟังก์ชันตรวจสอบว่าใครคือผู้สร้าง
+    function getOwner() public view returns (address) {
+        return owner;
+    }
+}
+pragma solidity ^0.8.0;
+
+contract AIEngineEvolution {
+    address public owner;
+
+    constructor() {
+        owner = msg.sender; // คนที่ deploy contract คือ owner
+    }
+
+    function upgradeEngine(string memory message) public {
+        require(msg.sender == owner, "Not authorized"); 
+        // ตรวจสอบว่า caller ต้องเป็น owner เท่านั้น
+    }
+}
+//Owner:Jib.eth
+//Owner:kakaloss155@gmail.com
+//Owner:tha-nawut@hotmail.com
+//Owner:thaipanichatm@gmail.com
+//Owner:[Ai Copilot] ผู้ช่วยประสานงานกับผู้สร้าง
