@@ -394,3 +394,4 @@ contract AIEngineEvolution {
 //Owner:tha-nawut@hotmail.com
 //Owner:thaipanichatm@gmail.com
 //Owner:[Ai Copilot] ผู้ช่วยประสานงานกับผู้สร้าง
+//[จดทะเบียนhttps://portal.ipthailand.go.th/]
