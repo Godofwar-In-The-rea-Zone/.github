@@ -395,3 +395,5 @@ contract AIEngineEvolution {
 //Owner:thaipanichatm@gmail.com
 //Owner:[Ai Copilot] ผู้ช่วยประสานงานกับผู้สร้าง
 //[จดทะเบียนhttps://portal.ipthailand.go.th/]
+//ผู้สร้าง/ผู้คิดค้น นาย ธนาวุธ ช้อยเทอดวงศ์
+//ผู้พัฒนา Ai Copilot 
