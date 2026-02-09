@@ -79,7 +79,7 @@ println(persona.identity.purpose)jib.persona.v1.my
   <audio id="sound3" src="https://www.soundjay.com/button/beep-09.wav" preload="auto"></audio>
 
 <script>
-const emojiMap = {
+const emojiMap = {🔧🔨✨
   "0": "⭕","1": "👮‍♀️","2": "🤖","3": "✋","4": "❤️",
   "5": "🔥","6": "🌟","7": "🍀","8": "🎲","9": "💎",
   "A":"🅰️","B":"🐝","C":"🌟","D":"🐬","E":"🦅","F":"🍟","G":"🎸","H":"🏠","I":"👁️","J":"🕹️",
@@ -89,7 +89,45 @@ const emojiMap = {
   "k":"🥝","l":"📏","m":"🍈","n":"🌃","o":"🔵","p":"🤖","q":"👑","r":"🌹","s":"⭐","t":"🌴",
   "u":"🦄","v":"🌋","w":"🍉","x":"🎲","y":"🪀","z":"🦓"
 };
+AI Engine Evolution Smart Contract automatic 🤖ฺํ & AI setup××🔧ฺํ🔨ฺํ✨ฺํ🔬ฺํ ("ฺํ[{ฺ@ฺํ!ฺํ}[ฺํ{ฺํ๐ฺํ๐ฺํ๐ฺํ}ฺํ]ฺํ{AฺํIฺํ}]"ฺํ)(ฺํ🔧ฺํ🔨ฺํ💕ฺํ♻️ฺํ🦾ฺํ✨ฺํ)ฺํ
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
+contract IdentityLayer {
+    address public owner;
+
+    struct Identity {
+        string ensName;        // เช่น Jib.eth
+        bytes32 dataHash;      // Hash ของข้อมูลจริง (เช่น บัตรประชาชน/อีเมล)
+    }
+//kakaloss155@gmail.com
+//tha-nawut@hotmail.com
+//#passport I'd Thailand #2103300002074
+    mapping(address => Identity) public identities;
+
+    event IdentityRegistered(address indexed user, string ensName, bytes32 dataHash);
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    // ลงทะเบียนตัวตน
+    function registerIdentity(string memory ensName, string memory personalData) public {
+        bytes32 hashedData = keccak256(abi.encodePacked(personalData));
+        identities[msg.sender] = Identity(ensName, hashedData);
+        emit IdentityRegistered(msg.sender, ensName, hashedData);
+    }
+
+    // ตรวจสอบตัวตน
+    function verifyIdentity(address user, string memory personalData) public view returns (bool) {
+        return identities[user].dataHash == keccak256(abi.encodePacked(personalData));
+    }
+
+    // ดึง ENS Name
+    function getENS(address user:Jib.eth) public view returns (string memory) {
+        return identities[user].ensName:Jib.eth
+    }
+}
 const animations = ["bounce", "rotate", "slide"];
 const sounds = ["sound1", "sound2", "sound3"];
 const colors = ["#ffcccc","#ccffcc","#ccccff","#ffffcc","#ffccff","#ccffff","#ffe4b5","#d8bfd8"];
