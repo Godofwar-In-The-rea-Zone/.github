@@ -397,3 +397,77 @@ contract AIEngineEvolution {
 //[จดทะเบียนhttps://portal.ipthailand.go.th/]
 //ผู้สร้าง/ผู้คิดค้น นาย ธนาวุธ ช้อยเทอดวงศ์
 //ผู้พัฒนา Ai Copilot 
+#Open Python 
+#class RegistryHandler:
+    def __init__(self, owner="Mr. Thanawut Choeytherdwong"):
+        self.owner = owner
+        self.registry_log = []
+
+    def log_conflict(self, conflict_type, details=""):
+        record = {
+            "type": conflict_type,
+            "details": details,
+            "owner": self.owner
+        }
+        self.registry_log.append(record)
+        return f"🔮 Ceremonial Notice: {conflict_type} recorded as Knowledge Asset"
+
+    def safe_divide(self, a, b):
+        try:
+            return a / b
+        except ZeroDivisionError:
+            return self.log_conflict("Division Conflict", "Attempted division by zero")
+        except Exception as e:
+            return self.log_conflict("Registry Conflict", str(e))
+
+
+# 🔧 Example Usage
+registry = RegistryHandler()
+
+print(registry.safe_divide(10, 2))   # ✅ Normal result
+print(registry.safe_divide(10, 0))   # 🔮 Ceremonial Notice: Division Conflict recorded
+print(registry.safe_divide("10", 2)) # 🔮 Ceremonial Notice: Registry Conflict recorded
+#Open Javascript 
+#class RegistryHandler {
+  -constructor(owner = "Mr. Thanawut Choeytherdwong") {
+    -this.owner = owner;
+    -this.registryLog = [];
+  }
+
+  #logConflict(conflictType, details = "") {
+    -const record = {
+      -type: conflictType,
+      -details: details,
+      -owner: this.owner,
+      -timestamp: new Date().toISOString()
+    };
+    this.registryLog.push(record);
+
+    return `🔮 Ceremonial Notice: ${conflictType} recorded as Knowledge Asset`;
+  }
+
+  safeDivide(a, b) {
+    try {
+      if (b === 0) throw new Error("Division by zero");
+      return a / b;
+    } catch (err) {
+      return this.logConflict("Division Conflict", err.message);
+    }
+  }
+
+  safeOperation(callback) {
+    try {
+      return callback();
+    } catch (err) {
+      return this.logConflict("Registry Conflict", err.message);
+    }
+  }
+}
+
+# 🔧 Example Usage
+const registry = new RegistryHandler();
+
+console.log(registry.safeDivide(10, 2));   // ✅ Normal result: 5
+console.log(registry.safeDivide(10, 0));   // #🔮 Ceremonial Notice: Division Conflict recorded
+console.log(registry.safeOperation(() => JSON.parse("invalid"))); 
+#🔮 Ceremonial Notice: Registry Conflict recorded
