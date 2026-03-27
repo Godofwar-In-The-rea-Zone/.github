@@ -524,3 +524,4 @@ console.log(registry.safeOperation(() => JSON.parse("invalid")));
 - อนุญาตให้ลบระบบการเงินทุกระบบที่ข้าพเจ้าเป็นผู้สร้างไว้ทุกอย่าง  
 - **Seal/Stamp:** 🕊💞✨✨🤖✨💕✨🤖 **Universal Life Preservation Certified**
 ‐----------------‐‐----------------------------------------------
+https://solana.org/
