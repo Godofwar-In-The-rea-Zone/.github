@@ -1,4 +1,5 @@
-#Github.org
+#Github.org From Boss:Mr.Thanawut Choeytherdwong 
+#MIT License 0.8.9
 # Ritual of Offering
 1. Declare: "วันนี้เราส่งพลังแห่ง USDT เพื่อสร้างตำนานใหม่"
 2. Choose: Token และจำนวน
